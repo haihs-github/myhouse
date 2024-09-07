@@ -1,0 +1,16 @@
+<a href="/" class="">home</a>
+<a href="cal" class="">tính tiền dịch vụ</a>
+<a href="congno" class="">công nợ</a>
+
+<form action="{% url 'subform' %}" method="post">
+	{% csrf_token %}
+	{% for x in phongs %}
+	<span>Phòng {{x.id}} </span>
+	<label>số điện</label>
+	<input type="number" name="sodienphong{{x.id}}" value="{{x.sodienthangnay}}">
+	<label>số nước</label>
+	<input type="number" name="sonuocphong{{x.id}}" value="{{x.sonuocthangnay}}">
+	<br>
+	{% endfor %}
+	<button type="submit">sửa</button>
+</form>

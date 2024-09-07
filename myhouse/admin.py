@@ -7,10 +7,10 @@ from .models import Congno, Phong
 # Register your models here.
 
 class CongnoAdmin(admin.ModelAdmin):
-	list_display = ("tiennha", "tiennuoc", "tiendien", "trangthai")
+	list_display = ("id", "thang", "tiennha", "tiennuoc", "tiendien", "trangthai, cuaphong")
 
 class PhongAdmin(admin.ModelAdmin):
-	list_display = ("sodienthangtruoc", "sodienthangnay", "sonuocthangtruoc", "sonuocthangnay","tiennha")
+	list_display = ("id", "sodienthangtruoc", "sodienthangnay", "sonuocthangtruoc", "sonuocthangnay","tiennha")
 
 admin.site.register(Phong, PhongAdmin)
 admin.site.register(Congno, CongnoAdmin)

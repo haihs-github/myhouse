@@ -1,0 +1,37 @@
+<a href="/" class="">home</a>
+<h1 class="">Phong {{phong.id}}</h1>
+<table>
+	<tr>
+		<th>Tiền</th>
+		<th>Số đầu</th>
+		<th>Số cuối</th>
+		<th>Tổng</th>
+		<th>thành tiền</th>
+	</tr>
+	<tr>
+		<td>tiền điện</td>
+		<td>{{phong.sodienthangtruoc}}</td>
+		<td>{{phong.sodienthangnay}}</td>
+		<td>{{sodien}}</td>
+		<td>{{tiendien}}đ</td>
+	</tr>
+	<tr>
+		<td>tiền nước</td>
+		<td>{{phong.sonuocthangtruoc}}</td>
+		<td>{{phong.sonuocthangnay}}</td>
+		<td>{{sonuoc}}</td>
+		<td>{{tiennuoc}}đ</td>
+	</tr>
+	<tr>
+		<td>tổng</td>
+		<td>{{tong}}đ</td>
+	</tr>
+	<tr>
+		<td>trạng thái</td>
+		{% if trangthai == False %}
+		<td>Chưa nộp</td>
+		{% else %}
+		<td>Đã nộp</td>
+		{% endif %}
+	</tr>
+</table>
